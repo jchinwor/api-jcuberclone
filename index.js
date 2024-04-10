@@ -4,7 +4,7 @@ const axios = require('axios')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 require('dotenv').config()
-const port = 4001
+
 
 axios.defaults.baseURL = process.env.GOOGLE_MAPS_API_URL
 
@@ -48,6 +48,6 @@ app.get('/api/distance/:pickup/:destination', async(req, res)=>{
     }
 })
 
-app.listen(port, () =>{
-    console.log(`App listening at http://localhost:${port}`)
+app.listen(process.env.PORT, () =>{
+    console.log(`App listening at http://localhost:${process.env.PORT}`)
 })

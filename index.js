@@ -10,7 +10,7 @@ axios.defaults.baseURL = process.env.GOOGLE_MAPS_API_URL
 
 app.use(bodyParser.json())
 app.use(cors({
-    origin:[`${process.env.FRONTEND_URL}`,"http://localhost:5173"]
+    origin:[`${process.env.FRONTEND_URL}`,"http://localhost:5173","https://jc-uberclone.onrender.com"]
 }))
 
 //Address
